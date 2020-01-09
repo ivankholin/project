@@ -22,15 +22,9 @@ CONNECT_PARAMS = 'host= dbname= user= password='
 
 TS_IMAGE_SQL = \
 '''\
-    select p_photo_ts, p_photo_grz from gibdd_traffic.get_tr_check_photo_ts_grz(
-        %(tr_check_id)s
-    ) ts_image
+
    \
 '''
-
-#select gibdd_traffic.get_tr_check_photo_grz(%(tr_check_id)s)  # фото ГРЗ
-#select ts_image from gibdd_traffic.get_tr_check_photo_ts(%(tr_check_id)s) ts_image # фото ТС
-
 
 def strftime(dt):
     return dt.strftime('%Y-%m-%d %H:%M:%S')
